@@ -12,7 +12,7 @@ public class Result {
     private int ball;
 
     public Result(List<ResultCond> results) {
-        IntStream.range(0, 3).forEach(i -> {
+        IntStream.range(0, results.size()).forEach(i -> {
             if (results.get(i) == STRIKE) {
                 strike++;
             }
@@ -20,5 +20,21 @@ public class Result {
                 ball++;
             }
         });
+    }
+
+    public int getStrike() {
+        return strike;
+    }
+
+    public int getBall() {
+        return ball;
+    }
+
+    public boolean isNothing() {
+        return strike == 0 && ball == 0;
+    }
+
+    public boolean isCorrect() {
+        return strike == 3;
     }
 }

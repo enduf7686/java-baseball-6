@@ -21,9 +21,8 @@ public class NumberComparator {
         IntStream.range(0, 3).forEach(index -> {
             if (number1.get(index) == number2.get(index)) {
                 results.add(STRIKE);
-                return;
             }
-            if (number1.contains(number2.get(index))) {
+            if (number1.get(index) != number2.get(index) && number1.contains(number2.get(index))) {
                 results.add(BALL);
             }
         });
