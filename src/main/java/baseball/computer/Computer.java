@@ -11,4 +11,8 @@ public class Computer {
         this.numberGenerator = numberGenerator;
         this.number = new Number(numberGenerator.generate());
     }
+
+    public Number getNumber() {
+        return number;
+    }
 }
