@@ -8,6 +8,14 @@ public record Number(List<Integer> numbers) {
         validate(numbers);
     }
 
+    public int get(int index) {
+        return numbers.get(index);
+    }
+
+    public boolean contains(int value) {
+        return numbers.contains(value);
+    }
+
     private void validate(List<Integer> numbers) {
         checkSize(numbers);
         checkRange(numbers);
